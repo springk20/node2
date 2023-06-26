@@ -1,0 +1,35 @@
+@charset "utf-8";
+*{
+    margin: 0 auto;
+    color:#666;
+     font-family: 'NanumSquareNeo', 'NanumSquare';
+    /*font-family: 'NanumSquareNeoLight';
+    font-family: 'NanumSquareNeoBold';
+    font-family: 'NanumSquareNeoExtraBold';
+    font-family: 'NanumSquareNeoHeavy';   */
+}
+body{
+    width: 100%;
+}
+ul{padding: 0;}
+ul li{list-style: none;}
+a{
+    text-decoration: none;
+    color: inherit;
+}   
+.hidden{
+    position: absolute;
+    left: -9999px;
+    font-size: 0;
+}
+
+/*기본 배경창 */
+#container{
+    width: 50%;
+    position: relative;
+    background-color: bisque;
+    border-radius: 15px;
+    top: 200px;
+    min-width: 350px;
+    max-width: 700px;
+}

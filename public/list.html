@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dadokdadok</title>
+    <link rel="stylesheet" href="./list.css">
+    <link rel="stylesheet" href="./common.css">
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <a href="#">2021</a>
+            <a href="#">2022</a>
+        </header>
+
+        <div class="content">
+            <h1>2023년</h1>
+
+            <form action="/passage" method="get">
+                <button type="submit" class="add">구절</button>
+            </form>
+            <form action="/create" method="get">
+                <button type="submit" >추가</button>
+            </form>
+            
+        </div>
+        <table>
+            <tr>
+                <th>순번</th>
+                <th>날짜</th>
+                <th>제목</th>
+                <th>작가</th>
+                <th></th>
+            </tr>
+            <% data.forEach(function (booklist, index) { %>
+            <tr>
+                <td><%= booklist.number %></td>
+                <td><%= booklist.date %></td>
+                <td><a href="../bookinfo.html"><%= booklist.title %></a></td>
+                <td><%= booklist.author %></td>
+                <td><a href="/modify/<%= booklist.number %>">수정</a></td>
+            </tr>
+            <% }); %>
+        </table>
+    </div>
+    
+</body>
+</html>

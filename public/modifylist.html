@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dadokdadok_add</title>
+    <style>
+    *{
+        margin: 0 auto;
+        color:#666;
+        font-family: 'NanumSquareNeo', 'NanumSquare';
+    }
+    body{
+        width: 100%;
+    }
+    ul{padding: 0;}
+    ul li{list-style: none;}
+    a{
+        text-decoration: none;
+        color: inherit;
+    }   
+    .hidden{
+        position: absolute;
+        left: -9999px;
+        font-size: 0;
+    }
+
+    #container{
+        width: 50%;
+        position: relative;
+        background-color: bisque;
+        border-radius: 15px;
+        top: 200px;
+        min-width: 350px;
+        max-width: 700px;
+    }  
+
+    #container>h1{
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    } 
+    #container{
+        padding-bottom: 20px;
+    }
+    .mdbtn{
+        float: right;
+        font-size: 1.02em;
+        font-family: 'NanumSquareNeoExtraBold';
+        width: 50px;
+        line-height: 30px;    
+        color: #666;
+        background-color: bisque;
+        border: transparent;
+        margin: 0px 10% 5px 0px;
+        text-align: center;
+    }
+    input.mdbtn{
+        margin-right: 2%;
+    }
+    a.mdbtn{
+        line-height: 32px;
+    }
+    .mdbtn:hover{
+        cursor: pointer;
+        background-color: #666;
+        color: bisque;
+    }
+
+    table{
+        width: 80%;
+        text-align: center;
+        border-collapse: collapse;
+        clear: both;
+    }
+    table td{
+        padding-bottom: 35px;
+    }
+    table td>label{
+        width: 20%;
+    }
+    table td>input{
+        width: 80%;
+        border: 0;
+        border-bottom: 1px solid #66666685;
+        background-color: bisque;
+    }
+    table td>input:focus{
+        outline: none;
+        background-color: bisque;
+        color: #666;
+    }
+    </style>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="container">
+        <h1>틀렸어도 괜찮아</h1>        
+        <form method="post">
+            <a href="/" class="mdbtn">이전 </a>
+            <input type="submit" value="수정" class="mdbtn">            
+            <table>
+                <tr>
+                    <td><label>날짜&nbsp;</label></td>
+                    <td><input type="text" name="date" value="<%= data.date %>"></td>
+                </tr>
+                <tr>
+                    <td><label>제목&nbsp;</label></td>
+                    <td><input type="text" name="title" value="<%= data.title %>"></td>
+                </tr>
+                <tr>
+                    <td><label>작가&nbsp;</label></td>
+                    <td><input type="text" name="author" value="<%= data.author %>"></td>
+                </tr>               
+            </table>            
+        </form>
+    </div>
+</body>
+</html>

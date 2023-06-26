@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+#container>h1{
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.addPassage{
+    float: right;
+    font-size: 1.02em;
+    font-family: 'NanumSquareNeoExtraBold';
+    width: 50px;
+    line-height: 30px;    
+    color: #666;
+    background-color: bisque;
+    border: transparent;
+    margin: 0px 5% 5px 0px;
+    text-align: center;
+}
+input.addPassage{
+    margin-right: 2%;
+}
+a.addPassage{
+    line-height: 32px;
+}
+.addPassage:hover{
+    cursor: pointer;
+    background-color: #666;
+    color: bisque;
+}
+textarea{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    border: transparent;
+    background-color: #999;
+    color: bisque;
+}
+textarea:focus{outline: none;}
+
+.passage_memo{
+    width: 90%;
+    margin-top: 20px;
+    font-size: 0.9em;
+    padding-bottom: 20px;
+}
+.passage_memo td{
+    padding-bottom: 25px;
+
+    
+}
+.passage_memo td>a{font-size: 0.85em;}
+.passage_memo td>a:hover{color: tomato;}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dadokdadok_passage</title>
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./passage.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="container">
+        <h1>책은 가고 구절은 남아</h1>
+        <form method="post">
+            <a href="/" class="addPassage">이전 </a>
+            <input type="submit" value="추가" class="addPassage">
+
+            <textarea name="memo" cols="30" rows="5" value="<%= data.memo %>"></textarea>        
+        </form>
+
+        <table class="passage_memo">
+            <% data.forEach(function (passagelist, index) { %>
+            <tr>
+                <td><%= passagelist.memo %><a href="/passage/<%= passagelist.number %>">&nbsp;&nbsp;&nbsp; 수정</a>
+                    <a href="/delete/<%= passagelist.number %>">&nbsp;&nbsp;&nbsp; 삭제</a></td>
+            </tr>
+            <% }); %>
+        </table>
+
+    </div>
+
+    
+
+</body>
+</html>

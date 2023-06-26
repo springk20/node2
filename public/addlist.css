@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+#container{
+    padding-bottom: 20px;
+}
+#container>h1{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}    
+.addbtn{
+    float: right;
+    font-size: 1.02em;
+    font-family: 'NanumSquareNeoExtraBold';
+    width: 50px;
+    line-height: 30px;    
+    color: #666;
+    background-color: bisque;
+    border: transparent;
+    margin: 0px 10% 5px 0px;
+    text-align: center;
+}
+input.addbtn{
+    margin-right: 2%;
+}
+a.addPassage{
+    line-height: 32px;
+}
+
+.addbtn:hover{
+    cursor: pointer;
+    background-color: #666;
+    color: bisque;
+}
+
+
+table{
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse;
+    clear: both;
+}
+
+
+table td{
+    padding-bottom: 35px;
+
+    /* border: 1px solid red;
+    box-sizing: border-box; */
+}
+table td>label{
+    width: 20%;
+    /* border-right: 1px solid #666; */
+}
+table td>input{
+    width: 80%;
+    border: 0;
+    border-bottom: 1px solid #66666685;
+    background-color: bisque;
+}
+table td>input:focus{
+    outline: none;
+    background-color: bisque;
+    color: #666;
+}
