@@ -138,7 +138,13 @@ app.post('/passage', (request, response) => {
 //     });
 // });
 
-
+app.get('/maindelete/:id', (request, response) => {
+    const body = request.body;
+    connection.query('delete from passagelist where number= ?',
+    [request.params.id], () => {
+        response.redirect('/');
+    });
+});
 
 app.get('/delete/:id', (request, response) => {
     const body = request.body;
