@@ -140,7 +140,7 @@ app.post('/passage', (request, response) => {
 
 app.get('/maindelete/:id', (request, response) => {
     const body = request.body;
-    connection.query('delete from passagelist where number= ?',
+    connection.query('delete from booklist where number= ?',
     [request.params.id], () => {
         response.redirect('/');
     });
