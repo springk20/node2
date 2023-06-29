@@ -46,7 +46,7 @@
             <% data.forEach(function (booklist, index) { %>
             <tr>
                 <td><%= booklist.date %></td>
-                <td><a href="../bookinfo.html"><%= booklist.title %></a></td>
+                <td><%= booklist.title %></td>
                 <td><%= booklist.author %></td>
                 <td><a href="/modify/<%= booklist.number %>">수정</a></td>
                 <td><a href="/maindelete/<%= booklist.number %>">삭제</a></td>
