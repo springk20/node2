@@ -29,6 +29,11 @@ app.use(express.static(`${__dirname}/public`));
 // });
 
 
+// connection.query('create table booklist22 (number INT not null auto_increment primary key, date varchar(5) not null, title varchar(100) not null, author varchar(100) not null);', (error, results, fields)=>{
+//     if(error) throw error;
+//     console.log("table생성 완료!");
+// });
+
 // connection.end();
 
 // connection.query('insert into booklist (date, title, author) values(\'1월\',\'마리오네트의 춤\',\'이금이\');',(error, cdresults, fields)=>{
@@ -47,6 +52,26 @@ app.get('/', (request, response)=>{
     });
 });
 
+app.get('/list21', (request, response)=>{
+    fs.readFile('public/list21.html', 'utf-8', (error, data)=>{
+        connection.query('select * from booklist21',(error, results, fields)=>{
+            if(error) throw error;
+            response.send(ejs.render(data, {
+                data:results,
+            }));
+        });        
+    });
+});
+app.get('/list22', (request, response)=>{
+    fs.readFile('public/list22.html', 'utf-8', (error, data)=>{
+        connection.query('select * from booklist22',(error, results, fields)=>{
+            if(error) throw error;
+            response.send(ejs.render(data, {
+                data:results,
+            }));
+        });        
+    });
+});
 
 
 
@@ -118,6 +143,11 @@ app.post('/passage', (request, response) => {
 
 /*passage 수정 */
 
+// connection.query('create table passagelist (number INT not null auto_increment primary key, memo varchar(10000) not null);', (error, results, fields)=>{
+//     if(error) throw error;
+//     console.log("table생성 완료!");
+// });
+
 // app.get('/passage/:id', (request, response) => {
 //     fs.readFile('public/passagelist.html', 'utf-8', (error, data) => {
 //       connection.query('select * from passagelist WHERE number =?', [request.params.id], (error, results) => {
@@ -138,6 +168,8 @@ app.post('/passage', (request, response) => {
 //     });
 // });
 
+
+
 app.get('/maindelete/:id', (request, response) => {
     const body = request.body;
     connection.query('delete from booklist where number= ?',
@@ -147,15 +179,16 @@ app.get('/maindelete/:id', (request, response) => {
 });
 
 app.get('/delete/:id', (request, response) => {
-    const body = request.body;
-    connection.query('delete from passagelist where number= ?',
-    [request.params.id], () => {
-        response.redirect('/passage');
-    });
-  });
+const body = request.body;
+connection.query('delete from passagelist where number= ?',
+[request.params.id], () => {
+    response.redirect('/passage');
+});
+});
 
 
 app.listen(3000, ()=>{
     console.log('Server is running port 3000!');
     // connection.connect();
 });
+
