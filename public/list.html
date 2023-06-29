@@ -14,8 +14,14 @@
 <body>
     <div id="container">
         <header>
-            <a href="#">2021</a>
-            <a href="#">2022</a>
+            <!-- <a href="./list21.html">2021</a>
+            <a href="./list22.html">2022</a> -->
+            <form action="/list21" method="get">
+                <button class="list-btn">2021</button>
+            </form>
+            <form action="/list22" method="get">
+                <button class="list-btn">2022</button>
+            </form>
         </header>
 
         <div class="content">
@@ -31,7 +37,6 @@
         </div>
         <table>
             <tr>
-                <th>순번</th>
                 <th>날짜</th>
                 <th>제목</th>
                 <th>작가</th>
@@ -40,7 +45,6 @@
             </tr>
             <% data.forEach(function (booklist, index) { %>
             <tr>
-                <td><%= booklist.number %></td>
                 <td><%= booklist.date %></td>
                 <td><a href="../bookinfo.html"><%= booklist.title %></a></td>
                 <td><%= booklist.author %></td>
