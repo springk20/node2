@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dadokdadok</title>
+    <link rel="stylesheet" href="./list.css">
+    <link rel="stylesheet" href="./common.css">
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <form action="/list22" method="get">
+                <button class="list-btn">2022</button>
+            </form>
+            <form action="/" method="get">
+                <button class="list-btn">2023</button>
+            </form>
+        </header>
+
+        <div class="content">
+            <h1 class="sublist">2021년</h1>
+
+        </div>
+        <table>
+            <tr>
+                <th>날짜</th>
+                <th>제목</th>
+                <th>작가</th>
+            </tr>
+            <% data.forEach(function (booklist21, index) { %>
+            <tr>
+                <td><%= booklist21.date %></td>
+                <td><a href="#"><%= booklist21.title %></a></td>
+                <td><%= booklist21.author %></td>
+            </tr>
+            <% }); %>
+        </table>
+    </div>
+    
+</body>
+</html>
